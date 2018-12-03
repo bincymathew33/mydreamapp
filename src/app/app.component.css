@@ -1,0 +1,23 @@
+header{
+  background-color: blue;
+  border-bottom: 1px solid black;
+  clear:both;
+  
+}
+nav {
+    float:right;
+    margin-right: 20px;
+}
+nav ul li{
+ display: inline-block; 
+list-style: none;
+padding:10px;
+}
+footer
+{
+position:fixed;
+background-color: greay;
+bottom :0;
+height: 100px;
+
+}
