@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 
-
 import {RouterModule, Routes, ROUTES} from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ListComponent } from './components/list/list.component';
 const route :Routes = [{
-  path:'about',
+  path:'about/:itemid',
   component:AboutComponent
 },
 {
@@ -23,10 +22,11 @@ const route :Routes = [{
 @NgModule({
   imports: [
     RouterModule.forRoot(route), 
+    
   ],
   exports:[
     RouterModule
   ]
-  declarations: []
+ 
 })
 export class ApprouterModule { }

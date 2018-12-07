@@ -6,7 +6,7 @@
         <a routerLink="/">Home</a>
       </li>
       <li>
-        <a routerLink="/about">About</a>
+        <a [routerLink]="['/about/abc']">About</a>
       </li>
       <li>
         <a routerLink="/list">List</a>
@@ -14,10 +14,16 @@
     </ul>
   </nav>
   <div style="clear:both"></div>
-<header>
+</header>
   <section style="clear:both; position:fixed;margin-top: 20px">
     This is the content area
     <router-outlet></router-outlet>
+   <app-home [resvalue]="repository" ></app-home>
+    <!-- <div *ngFor='let resp of repository'>
+      {{resp}}
+    </div> -->
+    <!-- <input [(ngModule)]="myprop"/>
+    {{myprop}} -->
   </section>
 <footer>
 this is footer

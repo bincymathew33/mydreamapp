@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component,OnInit } from '@angular/core';
+import { ReposerviceService } from './reposervice.service';
+import {IRepoResponse,IRepo} from './models/repo';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-dream-app';
+  repository:IRepo[];
+  myprop:string;
+  constructor(private resposiveservice:ReposerviceService  )
+  {
+
+  }
+  ngOnInit()
+ {
+ 
+ this.resposiveservice.getRepository().subscribe((repositoryread:IRepoResponse)=>
+ {
+  
+
+ this.repository=repositoryread.items;
+
+  
+ });
+}
 }

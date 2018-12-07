@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ListComponent } from './components/list/list.component';
 import { ApprouterModule } from './approuter.module';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 // const route :Routes = [{
 //   path:'about',
@@ -32,7 +34,9 @@ import { ApprouterModule } from './approuter.module';
   imports: [
     BrowserModule,
     // RouterModule.forRoot(route),
-    ApprouterModule
+    ApprouterModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
