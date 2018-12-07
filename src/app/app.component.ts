@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'my-dream-app';
   repository:IRepo[];
   myprop:string;
+  newprop:string;
   constructor(private resposiveservice:ReposerviceService  )
   {
 

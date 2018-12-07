@@ -11,4 +11,7 @@ export class ReposerviceService {
   getRepository():Observable<IRepoResponse>{
     return this.http.get<IRepoResponse>('https://api.github.com/search/repositories?q=javascript');
   }
+  getusers(){
+    
+  }
 }
