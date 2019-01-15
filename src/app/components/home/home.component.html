@@ -1,8 +1,54 @@
+
+
+<div>
+<input type="text" #myinput/>
+
+<button [ngClass]="{'active':activeindex==='users'}" (click)="userclick(myinput.value,'users')"  >Users </button>&nbsp;&nbsp;
+<button [ngClass]="{'active':activeindex==='repo'}" (click)="repoclick(myinput.value,'repo')" >Repository</button>
+</div>
+<!-- <div class="row">
+  <div class="alighn">
+  [ngClass]="{'active':activeindex === 0}"
+  [ngClass]="{'active':activeindex === 1}"
+    <button (click)="userclick(myinput.value)"  >Users </button><div>
+        <button (click)="repoclick(myinput.value)" >Repository</button>
+  </div>
+  <div class="alighn">
+  
+    
+    </div> -->
+<div *ngIf="activeindex==='repo'">
 <table>
-  <tr *ngFor="let res of resvalue">
-    <td >
-      hellow
-{{res.owner.login}}
-    </td>
+ 
+  <tr *ngFor="let res of repository">
+   
+  
+          <!-- <td >
+    
+            {{res.full_name}}
+                </td> -->
+<td>
+                {{res.owner.login}}
+              </td>
+              <!-- <td><button>Repodetails</button></td>  -->
+              <td>
+                <a [routerLink]="['/githubdetail',res.owners.login]" >ViewRepositoryDetails</a>
+              </td>
+
   </tr>
 </table>
+</div>
+
+<div *ngIf="activeindex==='users'">
+<table>
+    <tr *ngFor="let res of users">
+     
+      <td >
+      
+        {{res.login}}
+            </td>
+         <td>
+           <a [routerLink]="['/userdetails',res.login]" >ViewUserDetails</a>
+         </td></tr>
+  </table>
+</div>

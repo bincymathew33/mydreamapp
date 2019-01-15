@@ -1,24 +1,39 @@
+<h1>Welcome to my-dream-app! </h1>
+
 <header>
   Employee Management Syatem
   <nav>
     <ul>
        <li>
-        <a routerLink="/">Home</a>
+        <a routerLink="/">Loged In</a>
       </li>
       <li>
-        <a [routerLink]="['/about/abc']">About</a>
+        <a routerLink="/home">Home</a>
       </li>
+      <li>
+        <a routerLink="/github">Github</a>
+      </li>
+      <!-- <li>
+        <a [routerLink]="['/about/abc']">About</a>
+      </li> -->
       <li>
         <a routerLink="/list">List</a>
       </li>
+      <li>
+        <a routerLink="/cartdetails">CartDetails</a>
+      </li>
     </ul>
   </nav>
+  
   <div style="clear:both"></div>
+ 
 </header>
   <section style="clear:both; position:fixed;margin-top: 20px">
     This is the content area
+    <!-- <app-cart></app-cart>
+    <button (click)="logedIn()">LogedIn</button> -->
     <router-outlet></router-outlet>
-   <app-home [resvalue]="repository" ></app-home>
+   <!-- <app-home [resvalue]="repository" (output)="selectedvalue($event)"></app-home> -->
     <!-- <div *ngFor='let resp of repository'>
       {{resp}}
     </div> -->

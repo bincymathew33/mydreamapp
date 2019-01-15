@@ -1,0 +1,39 @@
+<H2>Login form</H2>
+<div class="container" >
+    <!-- <div class="row">
+        <div class="col-sm-4"> -->
+<form #myform="ngForm" name="LoginForm" (ngSubmit)="myformsubmit(myform)">
+  <div>
+    Username:<input ngModel #username type="text" name="Username" required minlength="2"/>
+    <div *ngIf="username.invalid" && username.dirty>
+      <span *ngIf="username.errors.required">This field is required</span>
+      <span *ngIf="username.errors.minlength">
+        This field required{{username.errors.minlength.requiredlength}} charactors
+      </span>
+    </div>
+  </div>
+  <div style="clear:both">&nbsp;</div>
+
+  <div>
+    Password:<input ngModel type="password" name="Password"/>
+  </div>
+  &nbsp;
+  <div style="text-align:center ">
+    <input type="submit" value="Submit" name="Submit"/> 
+  </div>
+  
+</form>
+<!-- </div>
+</div> -->
+<p>
+  <!-- {{myform.value.Username | json }}
+  {{myform.value.Password | json }} -->
+  <span *ngIf='Loggedinsucces==="success"'>
+You Successfully logedin
+  </span>
+  <span *ngIf='Loggedinsucces =="failed"'>
+    Logged in fail
+  </span>
+</p>
+
+</div>

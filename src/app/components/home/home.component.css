@@ -1,0 +1,20 @@
+.row{
+    clear:both;
+    width:100%;
+    max-width:500px ;
+    
+   
+}
+.alighn{
+    max-width: 100px;
+    width:50%;
+    margin: 20px;
+    float:left;
+    
+}
+.active
+{
+background-color: green;
+font:bold;
+color: white;
+}

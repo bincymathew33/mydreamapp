@@ -8,6 +8,10 @@ import { ListComponent } from './components/list/list.component';
 import { ApprouterModule } from './approuter.module';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { DetailsComponent } from './components/details/details.component';
+import {CartModule} from './cart/cart.module';
+import {AuthModule} from './auth/auth.module';
+import { GithubComponent } from './components/github/github.component';
 
 // const route :Routes = [{
 //   path:'about',
@@ -29,14 +33,19 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ListComponent
+    ListComponent,
+    DetailsComponent,
+    GithubComponent,
+    
   ],
   imports: [
     BrowserModule,
     // RouterModule.forRoot(route),
     ApprouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CartModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

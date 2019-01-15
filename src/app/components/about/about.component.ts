@@ -6,12 +6,12 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
+  myvalue:string;
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
-   const itemid= this.route.snapshot.paramMap.get('itemid');
-    console.log(itemid);
+  //  const itemid= this.route.snapshot.paramMap.get('itemid');
+  //   console.log(itemid);
   }
 
 }

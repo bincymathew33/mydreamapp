@@ -11,5 +11,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  selectedvalue(btnvalue){
+alert(btnvalue);
+  }
 }

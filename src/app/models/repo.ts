@@ -1,10 +1,13 @@
 import {IUser} from './user'
-export interface IRepo{
+export interface `IRepo`{
 
     id:number;
     name:string;
     full_name:string;
-    owner:IUser;
+
+
+   
+    owner?:IUser;
 }
 export interface  IRepoResponse{
     total_count:number;
